@@ -5,7 +5,6 @@
 //  Created by Mateo Došlić on 05/05/2018.
 //  Copyright © 2018 Mateo Došlić. All rights reserved.
 //
-
 import UIKit
 
 @UIApplicationMain

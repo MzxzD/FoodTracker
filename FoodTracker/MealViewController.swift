@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        mealNameLabel.text = textField.text
+        @IBOutlet weak var mealNameLabel: UILabel!
     }
     
     // MARK: UIImagePickerControllerDelegate

@@ -52,8 +52,8 @@ class MealTableViewController: UITableViewController {
         
         cell.nameLabel.text = meal.name
         cell.photoImageView.image = meal.photo
-        cell.ratingControl.rating = meal.rating // Thread 1: EXC_BAD_ACCESS (code=2, address=0x10268a0f8)
-        // ######### CRASH! #######
+        cell.ratingControl.rating = meal.rating
+        
         
         return cell
     }
@@ -103,6 +103,18 @@ class MealTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //MARK: Actions
+    @IBAction func unwindToMealList(sender: UIStoryboardSegue){
+        if let sourceViewController = sender.source as? MealViewController, let meal = sourceViewController.meal {
+            
+            // Add a new meal.
+            let newIndexPath = IndexPath(row: meals.count, section: 0)
+            
+            meals.append(meal)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+    }
     
     // MARK: Private Methods
     

@@ -76,7 +76,7 @@ import UIKit
         let emptyStar = UIImage(named: "emptyStar", in: bundle, compatibleWith: self.traitCollection)
         let highlitedStar = UIImage(named: "highlitedStar", in: bundle, compatibleWith: self.traitCollection)
         
-        for _ in 0..<starCount {
+        for index in 0..<starCount {
             // Create the button
             let button = UIButton()
             
